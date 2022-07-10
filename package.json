@@ -1,0 +1,23 @@
+{
+  "name": "html-php",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/app.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NdekoCode/the-fundamentals-of-php.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NdekoCode/the-fundamentals-of-php/issues"
+  },
+  "homepage": "https://github.com/NdekoCode/the-fundamentals-of-php#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.5"
+  }
+}
