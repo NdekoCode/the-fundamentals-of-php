@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/NdekoCode/the-fundamentals-of-php#readme",
   "devDependencies": {
-    "tailwindcss": "^3.1.5"
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
   }
 }
