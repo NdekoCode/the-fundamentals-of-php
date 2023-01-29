@@ -1,9 +1,11 @@
 <?php
 require_once("./setup.php");
 
-$name = ["name" => "Arick"];
-$note1 = "Marc";
-$note2 = "Doe";
-echo "$note1 $note2";
+$prenom = "Marc";
+$nom = "Doe";
+$note1 = 10;
+$note2 = 20;
+$moyenne = (($note1 + $note2) / 2);
+echo "Bonjour $nom $prenom, vous avez eu $moyenne de moyenne";
 die();
 dump($name);
