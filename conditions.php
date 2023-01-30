@@ -9,3 +9,18 @@ if ($note > 12) {
 } else {
     print "Desoler, vous n'avez pas la moyenne\n";
 }
+
+$action = readline("Entrer votre action");
+switch ($action) {
+    case 1:
+        echo "Attaquer";
+        break;
+    case 2:
+        echo "Defendre";
+        break;
+    case 3:
+        echo "Passer mon tour";
+        break;
+    default:
+        echo "Vous n'avez rien choisis comme choix";
+}
