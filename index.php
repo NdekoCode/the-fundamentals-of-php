@@ -10,7 +10,10 @@
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold">PHP pour le back-end</h1>
+    <div class="mx-auto mt-5 max-w-7xl">
+
+        <h1 class="text-3xl font-bold">PHP pour le back-end</h1>
+    </div>
 </body>
 
 </html>
