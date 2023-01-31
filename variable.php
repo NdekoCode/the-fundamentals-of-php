@@ -17,7 +17,8 @@ $eleves = [
         "notes" => [12, 13, 15]
     ]
 ];
-dump($eleves);
-// echo "Bonjour $nom $prenom, vous avez eu $moyenne de moyenne";
+foreach ($eleves as $elv) {
+    dump($elv);
+}
 die();
 dump($name);
