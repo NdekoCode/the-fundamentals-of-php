@@ -9,3 +9,23 @@ PHP est donc un langage que l'on va principalement utiliser pour générer des p
 PHP dispose d'un typage dynamique. Il n'est donc pas nécessaire de déclarer le type des variables et c'est l'ordinateur qui va se charger de définir le type de variable de manière automatique
 
 Depuis PHP 7 il est possible d'indiquer le type des paramètres des fonctions ce qui permet de contre-balancer un des inconvénient de ce type de typage en apportant une meilleur organisation et stabilité du code.
+
+## Quelques utilités
+
+L'assignation d'un tableau dans une variable se fait par valeur et non par reference
+
+```{PHP}
+// Va juste faire une assignation par valeur
+$notes1 = [10, 13, 15, 15];
+$notes2 = $notes1;
+
+```
+
+Mais on peut palier à cella en utilisant l'operateur `&` devant la variable de type tableau ou objet et il va faire maintenant une affectation par reference.
+
+```{PHP}
+// Va juste faire une assignation par valeur
+$notes1 = [10, 13, 15, 15];
+$notes2 = &$notes1; // $note1 et $note2 font maintenant reference à la meme variable
+
+```
