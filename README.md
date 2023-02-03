@@ -12,6 +12,8 @@ Depuis PHP 7 il est possible d'indiquer le type des paramètres des fonctions ce
 
 ## Quelques utilités
 
+### Affectation des tableaux
+
 L'assignation d'un tableau dans une variable se fait par valeur et non par reference
 
 ```{PHP}
@@ -29,3 +31,7 @@ $notes1 = [10, 13, 15, 15];
 $notes2 = &$notes1; // $note1 et $note2 font maintenant reference à la meme variable
 
 ```
+
+### Les fonctions
+
+Sachez que si vous avez une variable non definit dans une fonction càd il n'est pas passer en parametre et il n'est pas créer dans la fonction, alors cette variable aura comme valeur `null`
