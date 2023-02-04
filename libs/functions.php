@@ -67,3 +67,25 @@ function printIt($data)
     print_r($data);
     echo "</pre>";
 }
+function radio(string $name, $value, array $data)
+{
+    $attribute = '';
+    if (isset($data[$name]) && $data[$name] === $value) {
+        $attribute .= 'checked';
+    }
+    return input($name, 'radio', $value, $value, $attribute);
+}
+function checkbox(string $name, string $value, array $data): string
+{
+    $checked = '';
+    if (isset($data[$name]) &&  in_array($value, $data[$name])) {
+        $checked .= "checked";
+    }
+    return input("{$name}[]", 'checkbox', $value, $value, $checked);
+}
+function input(string $name, string $type = "text", string $value = "", string $id = '', string $attributes = null): string
+{
+    return <<<HTML
+    <input type="$type" id="$id" name="$name" value="$value" $attributes/>
+HTML;
+}
