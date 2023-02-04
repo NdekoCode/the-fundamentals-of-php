@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/app.css">
-    <title>Apprendre PHP</title>
-</head>
-
-<body>
-    <div class="mx-auto mt-5 max-w-7xl">
-
-        <h1 class="text-3xl font-bold">PHP pour le back-end</h1>
-    </div>
-</body>
-
-</html>
+<?php require_once __DIR__ . DIRECTORY_SEPARATOR . "partials" . DIRECTORY_SEPARATOR . 'header.php' ?>
+<div class="p-5 rounded bg-light">
+    <h1>Navbar example</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+    <a class="btn btn-lg btn-primary" href="/docs/5.3/components/navbar/" role="button">View navbar docs &raquo;</a>
+</div>
+<?php require_once __DIR__ . DIRECTORY_SEPARATOR . "partials" . DIRECTORY_SEPARATOR . 'footer.php' ?>
