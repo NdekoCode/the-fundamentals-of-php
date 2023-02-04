@@ -27,20 +27,11 @@ function demanderCreneaux($phrase = "Veuiller entrer vos creneaux")
 {
 
     $creneaux = [];
-    echo "$phrase \n";
     while (true) {
-        $debut = (int)readline("Entrer l'heure de debut : \n");
-        $fin = (int)readline("Entrer l'heure de fin : \n");
-        if ($debut >= $fin) {
-            print("Le creneaux ne peut etre enregistrer car l'heure de fin est inferieur à l'heure de debut \n");
-        } elseif (($debut >= 0 && $debut <= 23) && ($fin >= 0 && $fin <= 23)) {
-            $creneaux[] = [$debut, $fin];
-            $action = readline("Voulez-vous continuez  (o/n)? \n");
-            if ($action === 'n') {
-                break;
-            }
-        } else {
-            print "L'heure entrer est incorrect \n";
+        $creneaux[] = demanderCreneau($phrase);
+        $action = readline("Voulez-vous continuez  (o/n)? \n");
+        if ($action === 'n') {
+            break;
         }
     }
     return $creneaux;
