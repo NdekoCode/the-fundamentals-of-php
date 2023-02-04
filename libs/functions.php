@@ -50,7 +50,7 @@ function sayYesOrNot($q)
 function loadFile($file, $dir = "partials", array $data = ["title" => "Mon site"])
 {
     extract($data);
-    return  require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . "$file.php";
+    return  require dirname(__DIR__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . "$file.php";
 }
 
 function dump($data)

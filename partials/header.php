@@ -64,7 +64,7 @@
 
 </head>
 
-<body>
+<body class="overflow-x-hidden mh-screen flex-column d-flex">
     <?php require_once __DIR__ . "/navbar.php" ?>
 
     <main class="container">

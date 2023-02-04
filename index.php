@@ -1,7 +1,6 @@
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . "libs" . DIRECTORY_SEPARATOR . 'functions.php';
 $title = "Page d'acceuil";
-$nav = 'index';
-loadFile("header", data: compact('title', 'nav'));
+loadFile("header", data: compact('title',));
 ?>
 <div class="p-5 rounded bg-light">
     <h1>Navbar example</h1>

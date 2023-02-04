@@ -40,7 +40,7 @@ Sachez que si vous avez une variable non definit dans une fonction càd il n'est
 
 Est un gros gros tableau qui contient des clés particulieres et qui nous donne des informations sur le serveur comme
 
-- `$_SERVER['DOCUMENT_ROOT']` : Nous donne la racine du serveur
+- `$_SERVER['DOCUMENT_ROOT']` : Nous donne la racine du serveur où se trouve notre nom de domaine
 - `$_SERVER['REMOTE_ADDR']` : Nous donne l'adresse distante
 - `$_SERVER['SERVER_SOFTWARE']` : La version de votre serveur et du type de serveur que vous utilisez
 - `$_SERVER['SERVER_NAME']` : Le nom du serveur(en locurence souvent le nom de domaine)
