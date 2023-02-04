@@ -1,5 +1,7 @@
 <?php
-function demanderCreneau($phrase = "Veuillez entrer un creneau")
+
+declare(strict_types=1);
+function demanderCreneau(?string $phrase = "Veuillez entrer un creneau")
 {
     $debut = null;
     $fin = null;
@@ -23,7 +25,7 @@ function demanderCreneau($phrase = "Veuillez entrer un creneau")
     }
     return [$debut, $fin];
 }
-function demanderCreneaux($phrase = "Veuiller entrer vos creneaux")
+function demanderCreneaux(?string $phrase = "Veuiller entrer vos creneaux")
 {
 
     $creneaux = [];
@@ -36,7 +38,5 @@ function demanderCreneaux($phrase = "Veuiller entrer vos creneaux")
     }
     return $creneaux;
 }
-// $creneaux = demanderCreneau();
-// $creneaux2 = demanderCreneau("Entrer votre creneau");
 $creneaux = demanderCreneaux("Entrer vos creneaux");
 print_r($creneaux);

@@ -35,3 +35,8 @@ $notes2 = &$notes1; // $note1 et $note2 font maintenant reference à la meme var
 ### Les fonctions
 
 Sachez que si vous avez une variable non definit dans une fonction càd il n'est pas passer en parametre et il n'est pas créer dans la fonction, alors cette variable aura comme valeur `null`
+
+**NB**: PHP essaie toujours de convertir tous ce qui ne correspond pas.
+Mais vous pouvez obliger à php d'eviter de faire ces conversions et pour cela il suffit que au debut de votre code PHP vous ajoutez la ligne:
+`declare(strict_types=1)`;
+Cette ligne permet de dire à PHP, **les types sont strict, empeche toute conversion implicite**

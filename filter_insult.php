@@ -2,7 +2,6 @@
 
 $insults = ['con', 'merde', 'batard', 'connard', 'baiseur', 'putain'];
 $sentence = readline("Entrer une phrase: \n");
-$sentenceArray = explode(" ", $sentence);
 
 foreach ($insults as $word) {
     $str = $word[0] . str_repeat("*", strlen($word) - 1);
