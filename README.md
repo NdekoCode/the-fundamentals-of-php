@@ -52,7 +52,10 @@ Est un gros gros tableau qui contient des clés particulieres et qui nous donne 
 - `$_SERVER['PHP_SELF']` : C'est le nom du fichier qui est entrer d'executer le script
 - ...
 
-**NB**: PHP essaie toujours de convertir tous ce qui ne correspond pas.
+## **NB**
+
+- PHP essaie toujours de convertir tous ce qui ne correspond pas.
 Mais vous pouvez obliger à php d'eviter de faire ces conversions et pour cela il suffit que au debut de votre code PHP vous ajoutez la ligne:
 `declare(strict_types=1)`;
 Cette ligne permet de dire à PHP, **les types sont strict, empeche toute conversion implicite**
+- Essayer toujours de separer votre code, dans la meilleur des cas separer l'affichage de la logique.
