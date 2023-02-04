@@ -47,3 +47,7 @@ function sayYesOrNot($q)
     }
     return false;
 }
+function loadFile($file, $dir = "partials")
+{
+    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . "$file.php";
+}
