@@ -2,6 +2,7 @@
 $title = "Composer une glace";
 loadFile("header", data: compact('title'));
 $total = 0;
+$ingredients = [];
 
 // checkbox
 $parfums = [
@@ -21,29 +22,21 @@ $supplements  = [
     "Pepites de chocolat" => 1,
     "Chantilly" => 0.5
 ];
-if (isset($_GET['parfum'])) {
+foreach (['parfum', 'supplement', 'cornet'] as $name) {
+    if (isset($_GET[$name])) {
 
-    foreach ($parfums as $parfum => $price) {
-        if (in_array($parfum, $_GET['parfum'])) {
-            $total += $price;
-        }
-    }
-}
-
-if (isset($_GET['cornet'])) {
-
-    foreach ($cornets as $cornet => $price) {
-        if ($cornet === $_GET['cornet']) {
-            $total += $price;
-        }
-    }
-}
-
-if (isset($_GET['supplement'])) {
-
-    foreach ($supplements as $supplement => $price) {
-        if (in_array($supplement, $_GET['supplement'])) {
-            $total += $price;
+        $values = $name . 's';
+        foreach ($$values as $value => $price) {
+            if (is_array($_GET[$name])) {
+                if (in_array($value, $_GET[$name])) {
+                    $total += $price;
+                    $ingredients[] = "$value - <strong>$price €</strong>";
+                }
+            } else {
+                if ($value === $_GET[$name]) {
+                    $ingredients[] = "$value - <strong>$price €</strong>";
+                }
+            }
         }
     }
 }
@@ -94,7 +87,12 @@ if (isset($_GET['supplement'])) {
     </div>
     <div class="shadow col-md-4 card">
         <div class="card-body">
-
+            <h2>Votre glace</h2>
+            <ul>
+                <?php foreach ($ingredients as $ingredient) : ?>
+                    <li><?= $ingredient ?></li>
+                <?php endforeach; ?>
+            </ul>
             <h3>Total</h3>
             <p><strong><?= $total ?></strong> €</p>
         </div>
