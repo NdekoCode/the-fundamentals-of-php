@@ -3,6 +3,7 @@ require_once "./setup.php";
 // On demande à l'utilisateur de rentrer les horaires d'ouverture d'un magasin en partant du principe que les mangasin est ouvert au meme heure du lundi au vendredi
 // On demande à l'utilisateur de rentrer l'heure de debut et l'heure de fin et ensuite de lui demander s'il va rentrer une autre plage horaire
 // Une fois que l'utilisateur entre une heure on lui dira si le magasi est ouvert ou s'il est fermer
+
 $heure_user = null;
 $debut;
 $fin;
