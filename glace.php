@@ -52,47 +52,52 @@ if (isset($_GET['supplement'])) {
 <div class="row">
     <div class="col-md-8">
 
-        <form action="/glace.php" method="GET">
+        <form action="/glace.php" class="shadow card " method="GET">
+            <div class="card-body">
 
-            <div class="mb-3">
-                <h3>Votre parfum</h3>
+                <div class="mb-3">
+                    <h3>Votre parfum</h3>
 
-                <?php foreach ($parfums as $parfum => $price) : ?>
-                    <div class="mb-1 checkbox">
-                        <label for="<?= $parfum ?>"><?= checkbox('parfum', $parfum, $_GET) ?> <?= $parfum ?> <strong>&puncsp;- <?= $price ?>€ </strong><br /></label>
+                    <?php foreach ($parfums as $parfum => $price) : ?>
+                        <div class="mb-1 checkbox">
+                            <label for="<?= $parfum ?>"><?= checkbox('parfum', $parfum, $_GET) ?> <?= $parfum ?> <strong>&puncsp;- <?= $price ?>€ </strong><br /></label>
 
-                    </div>
-                <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
 
+                </div>
+                <div class="mb-3">
+                    <h3>Votre cornet</h3>
+                    <?php foreach ($cornets as $cornet => $price) : ?>
+                        <div class="mb-1 d-flex">
+
+                            <label for="<?= $cornet ?>"><?= radio('cornet', $cornet, $_GET) ?> <?= $cornet ?> <strong>&puncsp;- <?= $price ?>€ </strong><br /></label>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <div class="mb-3">
+                    <h3>Vos supplements</h3>
+
+                    <?php foreach ($supplements as $supplement => $price) : ?>
+
+                        <div class="mb-1 checkbox">
+                            <label for="<?= $supplement ?>"><?= checkbox('supplement', $supplement, $_GET) ?> <?= $supplement ?> <strong>&puncsp;- <?= $price ?>€ </strong><br /></label>
+
+                        </div>
+                    <?php endforeach; ?>
+
+                </div>
+                <button class="rounded btn btn-primary rounded-0 rounded-end">Composer ma glace</button>
             </div>
-            <div class="mb-3">
-                <h3>Votre cornet</h3>
-                <?php foreach ($cornets as $cornet => $price) : ?>
-                    <div class="mb-1 d-flex">
-
-                        <label for="<?= $cornet ?>"><?= radio('cornet', $cornet, $_GET) ?> <?= $cornet ?> <strong>&puncsp;- <?= $price ?>€ </strong><br /></label>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-
-            <div class="mb-3">
-                <h3>Vos supplements</h3>
-
-                <?php foreach ($supplements as $supplement => $price) : ?>
-
-                    <div class="mb-1 checkbox">
-                        <label for="<?= $supplement ?>"><?= checkbox('supplement', $supplement, $_GET) ?> <?= $supplement ?> <strong>&puncsp;- <?= $price ?>€ </strong><br /></label>
-
-                    </div>
-                <?php endforeach; ?>
-
-            </div>
-            <button class="rounded btn btn-primary rounded-0 rounded-end">Composer ma glace</button>
         </form>
     </div>
-    <div class="col-md-4">
-        <h3>Total</h3>
-        <p><strong><?= $total ?></strong> €</p>
+    <div class="shadow col-md-4 card">
+        <div class="card-body">
+
+            <h3>Total</h3>
+            <p><strong><?= $total ?></strong> €</p>
+        </div>
     </div>
 </div>
 <h2>$_POST</h2>
