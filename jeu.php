@@ -3,8 +3,6 @@ $title = "Deviner un nombre";
 $aDeviner = 150;
 loadFile("header", data: compact('title'));
 
-printIt($_POST);
-dump($_POST);
 $value = null;
 $error = null;
 $success = null;
@@ -32,6 +30,12 @@ if (isset($_POST['chiffre'])) {
     </div>
     <button class="rounded btn btn-primary rounded-0 rounded-end">Deviner</button>
 </form>
+<h2>$_POST</h2>
+<?php
+printIt($_POST); ?>
+<h2>$_GET</h2>
+<?php
+dump($_GET); ?>
 <?php
 
 loadFile("footer");

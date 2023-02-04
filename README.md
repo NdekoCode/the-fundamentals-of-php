@@ -36,7 +36,11 @@ $notes2 = &$notes1; // $note1 et $note2 font maintenant reference à la meme var
 
 Sachez que si vous avez une variable non definit dans une fonction càd il n'est pas passer en parametre et il n'est pas créer dans la fonction, alors cette variable aura comme valeur `null`
 
-### La variable superglobal $_SERVER
+### La variable superglobal
+
+Sont des variables integrer dans PHP et accessible n'importe où dans PHP
+
+### $_SERVER
 
 Est un gros gros tableau qui contient des clés particulieres et qui nous donne des informations sur le serveur comme
 
@@ -51,6 +55,11 @@ Est un gros gros tableau qui contient des clés particulieres et qui nous donne 
 - `$_SERVER['SCRIPT_FILENAME']` : C'est le chemin complet vers le fichier qui est appeler par la requete de l'utilisateur
 - `$_SERVER['PHP_SELF']` : C'est le nom du fichier qui est entrer d'executer le script
 - ...
+
+### $_GET et $_POST
+
+ Sont souvent utiliser dans les traitements des formulaires
+ Dans les traitement des formulaires l'ordre des champs se fait suivant leurs arborescense HTML,par exemple si vous avez plusieur `<input/>` qui ont les memes nom mais differentes valeurs sachez que la valeurs retenus sera celui de l'input le plus bas dans la hierarchie de votre DOM
 
 ## **NB**
 
