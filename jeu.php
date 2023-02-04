@@ -3,13 +3,13 @@ $title = "Deviner un nombre";
 $aDeviner = 150;
 loadFile("header", data: compact('title'));
 
-printIt($_GET);
-dump($_GET);
+printIt($_POST);
+dump($_POST);
 $value = null;
 $error = null;
 $success = null;
-if (isset($_GET['chiffre'])) {
-    $value = (int) htmlentities($_GET['chiffre']);
+if (isset($_POST['chiffre'])) {
+    $value = (int) htmlentities($_POST['chiffre']);
     if ($value > $aDeviner) {
         $error = "Votre chiffre est trop grand";
     } elseif ($value < $aDeviner) {
@@ -26,7 +26,7 @@ if (isset($_GET['chiffre'])) {
     <div class="alert alert-success"><?= $success ?></div>
 <?php endif; ?>
 
-<form action="/jeu.php" method="GET" class="d-flex align-items-center">
+<form action="/jeu.php" method="POST" class="d-flex align-items-center">
     <div class="">
         <input type="number" value="<?= $value ?>" name="chiffre" class="form-control rounded-0 rounded-start">
     </div>
