@@ -47,7 +47,23 @@ function sayYesOrNot($q)
     }
     return false;
 }
-function loadFile($file, $dir = "partials")
+function loadFile($file, $dir = "partials", array $data = ["title" => "Mon site"])
 {
-    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . "$file.php";
+    extract($data);
+    return  require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . "$file.php";
+}
+
+function dump($data)
+{
+    echo "<pre>";
+    var_dump($data);
+    echo "</pre>";
+}
+
+
+function printIt($data)
+{
+    echo "<pre>";
+    print_r($data);
+    echo "</pre>";
 }

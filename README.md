@@ -36,6 +36,22 @@ $notes2 = &$notes1; // $note1 et $note2 font maintenant reference à la meme var
 
 Sachez que si vous avez une variable non definit dans une fonction càd il n'est pas passer en parametre et il n'est pas créer dans la fonction, alors cette variable aura comme valeur `null`
 
+### La variable superglobal $_SERVER
+
+Est un gros gros tableau qui contient des clés particulieres et qui nous donne des informations sur le serveur comme
+
+- `$_SERVER['DOCUMENT_ROOT']` : Nous donne la racine du serveur
+- `$_SERVER['REMOTE_ADDR']` : Nous donne l'adresse distante
+- `$_SERVER['SERVER_SOFTWARE']` : La version de votre serveur et du type de serveur que vous utilisez
+- `$_SERVER['SERVER_NAME']` : Le nom du serveur(en locurence souvent le nom de domaine)
+- `$_SERVER['SERVER_PORT']` : Le PORT sur lequel ecoute lu serveur.
+- `$_SERVER['REQUEST_URI']` : C'est l'URL qui a été demander par l'utilisateur.
+- `$_SERVER['REQUEST_METHOD']` : C'est la methode HTTP qui est utiliser, donc le verbe HTTP qui est utiliser
+- `$_SERVER['SCRIPT_NAME']` : C'est le nom du fichier qui est appeler par la requete de l'utilisateur
+- `$_SERVER['SCRIPT_FILENAME']` : C'est le chemin complet vers le fichier qui est appeler par la requete de l'utilisateur
+- `$_SERVER['PHP_SELF']` : C'est le nom du fichier qui est entrer d'executer le script
+- ...
+
 **NB**: PHP essaie toujours de convertir tous ce qui ne correspond pas.
 Mais vous pouvez obliger à php d'eviter de faire ces conversions et pour cela il suffit que au debut de votre code PHP vous ajoutez la ligne:
 `declare(strict_types=1)`;
